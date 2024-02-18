@@ -1,13 +1,20 @@
 
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
+### bundle
+```
+bundle add iww
+```
 
-    `bundle add iww`
+### gem
+```
+gem install iww
+```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    `gem install iww`
+### build
+```
+gem build iww.gemspec
+```
 
 ## Usage
 First, require the library:

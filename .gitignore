@@ -7,5 +7,7 @@
 /spec/reports/
 /tmp/
 
+*~
+
 *.gem
 github.sh

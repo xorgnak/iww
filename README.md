@@ -1,3 +1,7 @@
+# I.W.W. One Big Union
+The Indistrial Workers of the World represent workers from a host of backgrounds and occupations brought together in the struggle for better conditions for all.
+
+[more info](https://www.iww.org/)
 
 ## Installation
 
@@ -16,12 +20,12 @@ gem install iww
 gem build iww.gemspec
 ```
 
+
 ## Usage
 First, require the library:
 ```
 require 'iww'
 ```
-
 
 ### Preample
 The I.W.W. Constitution preamble.

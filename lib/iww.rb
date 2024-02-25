@@ -2,19 +2,22 @@
 
 require_relative "iww/version"
 
+# The Iww Module
 module Iww
-  class Error < StandardError; end
+  class Error < StandardError; end # :nodoc:
 
   @@LOGO = {
+    black: %[https://store.iww.org/wp-content/uploads/2019/09/logo-300x300.png],
     white: %[https://www.iww.org/images/globe.svg],
     red: %[https://www.iww.org/images/iww-globe-red.svg],
+    cat: %[https://store.iww.org/wp-content/uploads/2019/09/sabo-cat.png],
     seal: %[https://www.iww.org/images/entitled-iww-logo-white.svg]
   }
-
+  # images
   def self.image
     @@LOGO
   end
-
+  # sign up link
   def self.join!
     %[https://redcard.iww.org/user/register]
   end
@@ -29,7 +32,7 @@ module Iww
     %[It is the historic mission of the working class to do away with capitalism. The army of prod uction must be organised, not only for everyday struggle with capitalists, but also to carry on production when capitalism shall have been overthrown. By organizing industrially we are forming the structure of the new society within the shell of the old.],
     %[Knowing, therefore, that such an organization is absolutely necessary for emancipation, we unite under the following set of guiding principles and rules:]
   ]
-  
+  # I.W.W. Constitution Preamble.
   def self.preamble
     @@OLD
   end
@@ -74,6 +77,7 @@ module Iww
     "690" => "Sex Industry"
   }
 
+  # union divisions
   def self.divisions
     @@DIV
   end
@@ -116,18 +120,20 @@ module Iww
     "clerk" => ["660"],
     "budtender" => ["660"]
   }
-
+  # List of all jobs and divisions represented.
   def self.jobs
      [ @@MAP.keys, @@DIV.values ].flatten
   end
   
+  # add job +j+ to division +k+. 
   def self.job k, j
     if !@@MAP.has_key? k.to_s
       @@MAP[k.to_s] = []
     end
     @@MAP[k.to_s] << j
   end
-  
+
+  # job lookup.
   def self.[] x
     if @@MAP.has_key? x.to_s
       o = {}
